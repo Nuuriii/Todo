@@ -1,3 +1,12 @@
 export const TodoForm = () => {
-   return <div>TodoForm</div>;
+   return (
+      <form>
+         <input
+            type='text'
+            className='todo-input'
+            placeholder='What is the task today'
+         />
+         <button type='submit' className='todo-btn'></button>
+      </form>
+   );
 };
