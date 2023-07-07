@@ -16,7 +16,7 @@ export const Todo: React.FC<TodoProps> = ({ task, toggleComplete }) => {
          >
             {task.task}
          </p>
-         {/* Dibawah ini untuk  Icon */}
+         {/* Dibawah ini untuk menyimpan Icon */}
          <div>
             <FontAwesomeIcon icon={faPenToSquare} />
             <FontAwesomeIcon icon={faTrash} />
