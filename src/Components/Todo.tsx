@@ -2,10 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-export const Todo = (
-   { task }: { task: any },
-   { toggleComplete }: { toggleComplete: any }
-) => {
+interface TodoProps {
+   task: any;
+   toggleComplete: (id: string) => void;
+}
+
+export const Todo: React.FC<TodoProps> = ({ task, toggleComplete }) => {
    return (
       <div className='Todo'>
          <p
