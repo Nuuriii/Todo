@@ -5,9 +5,14 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 interface TodoProps {
    task: any;
    toggleComplete: (id: string) => void;
+   deleteTodo: (id: string) => void;
 }
 
-export const Todo: React.FC<TodoProps> = ({ task, toggleComplete }) => {
+export const Todo: React.FC<TodoProps> = ({
+   task,
+   toggleComplete,
+   deleteTodo,
+}) => {
    return (
       <div className='Todo'>
          <p
@@ -19,7 +24,10 @@ export const Todo: React.FC<TodoProps> = ({ task, toggleComplete }) => {
          {/* Dibawah ini untuk menyimpan Icon */}
          <div>
             <FontAwesomeIcon icon={faPenToSquare} />
-            <FontAwesomeIcon icon={faTrash} />
+            <FontAwesomeIcon
+               icon={faTrash}
+               onClick={() => deleteTodo(task.id)}
+            />
          </div>
       </div>
    );
