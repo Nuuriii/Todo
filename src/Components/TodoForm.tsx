@@ -8,6 +8,8 @@ export const TodoForm = ({ addTodo }: { addTodo: any }) => {
       e.preventDefault();
 
       addTodo(value);
+
+      setValue("");
    };
    return (
       <form onSubmit={handleSubmit}>
