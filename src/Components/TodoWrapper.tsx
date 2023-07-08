@@ -63,6 +63,7 @@ export const TodoWrapper = () => {
                key={index}
                toggleComplete={toggleComplete}
                deleteTodo={deleteTodo}
+               editTodo={editTodo}
             />
          ))}
       </div>
