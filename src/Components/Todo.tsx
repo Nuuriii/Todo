@@ -6,12 +6,14 @@ interface TodoProps {
    task: any;
    toggleComplete: (id: string) => void;
    deleteTodo: (id: string) => void;
+   editTodo: (id: string) => void;
 }
 
 export const Todo: React.FC<TodoProps> = ({
    task,
    toggleComplete,
    deleteTodo,
+   editTodo,
 }) => {
    return (
       <div className='Todo'>
@@ -23,7 +25,10 @@ export const Todo: React.FC<TodoProps> = ({
          </p>
          {/* Dibawah ini untuk menyimpan Icon */}
          <div>
-            <FontAwesomeIcon icon={faPenToSquare} />
+            <FontAwesomeIcon
+               icon={faPenToSquare}
+               onClick={() => editTodo(task.id)}
+            />
             <FontAwesomeIcon
                icon={faTrash}
                onClick={() => deleteTodo(task.id)}
